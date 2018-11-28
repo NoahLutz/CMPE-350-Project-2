@@ -1,0 +1,491 @@
+# MicroTiger Datapath File
+# Version: 1.00.0001
+dss16
+vtx$E1$AF
+vtx$E1$B9
+vtx$19$F5
+vtx$5$F5
+vtx$91$EB
+vtx$91$E1
+vtx$2D$EB
+vtx$2D$EB
+vtx$1D1$23
+vtx$1E5$23
+vtx$20D$55
+vtx$20D$A5
+vtx$5$CD
+vtx$A5$69
+vtx$A5$69
+vtx$73$D7
+vtx$73$9B
+vtx$E1$FF
+vtx$5$FF
+vtx$131$CD
+vtx$19F$CD
+vtx$19F$B9
+vtx$1A9$B9
+vtx$11D$B9
+vtx$11D$B9
+vtx$1EF$E1
+vtx$1BD$E1
+vtx$1EF$CD
+vtx$1BD$CD
+vtx$91$D7
+vtx$B9$A5
+vtx$B9$A5
+vtx$91$9B
+vtx$91$69
+vtx$87$69
+vtx$A5$A5
+vtx$A5$A5
+vtx$69$C3
+vtx$7D$C3
+vtx$2D$9B
+vtx$2D$9B
+vtx$41$C3
+vtx$41$C3
+vtx$E1$7D
+vtx$F5$7D
+vtx$CD$4B
+vtx$EB$4B
+vtx$EB$73
+vtx$E1$69
+vtx$D7$87
+vtx$F5$87
+vtx$1C7$EB
+vtx$1C7$A5
+vtx$1EF$A5
+vtx$1EF$EB
+vtx$19$CD
+vtx$5$A5
+vtx$19$A5
+vtx$18B$41
+vtx$18B$19
+vtx$1B3$41
+vtx$18B$B9
+vtx$F5$91
+vtx$EB$91
+vtx$1E5$41
+vtx$1E5$4B
+vtx$203$37
+vtx$203$37
+vtx$1E5$37
+vtx$1EF$37
+vtx$1D1$4B
+vtx$E1$9B
+vtx$F5$9B
+vtx$A5$87
+vtx$A5$87
+vtx$131$87
+vtx$131$87
+vtx$131$91
+vtx$131$91
+vtx$131$9B
+vtx$131$9B
+vtx$41$EB
+vtx$41$EB
+vtx$131$B9
+vtx$B9$D7
+vtx$A5$D7
+vtx$B9$AF
+vtx$87$CD
+vtx$91$CD
+vtx$2D$C3
+vtx$2D$C3
+vtx$1EF$C3
+vtx$1EF$C3
+vtx$A5$4B
+vtx$A5$4B
+vtx$F5$B9
+vtx$F5$B9
+vtx$19$91
+vtx$F$91
+vtx$16D$73
+vtx$1EF$73
+vtx$181$19
+vtx$F5$19
+vtx$7D$AF
+vtx$91$AF
+vtx$203$87
+vtx$203$A5
+vtx$91$4B
+vtx$87$4B
+vtx$91$87
+vtx$87$87
+vtx$203$CD
+vtx$203$B9
+vtx$69$9B
+vtx$87$37
+vtx$145$37
+vtx$145$7D
+vtx$145$9B
+vtx$1EF$9B
+vtx$11D$7D
+vtx$11D$7D
+vtx$109$7D
+vtx$109$7D
+vtx$CD$69
+vtx$D7$5F
+vtx$CD$87
+vtx$14F$5F
+vtx$E1$55
+vtx$131$E1
+vtx$1A9$E1
+vtx$131$D7
+vtx$1A9$D7
+vtx$14F$91
+vtx$1EF$91
+vtx$159$55
+vtx$1B3$19
+vtx$159$87
+vtx$1EF$D7
+vtx$1EF$D7
+vtx$F5$73
+vtx$1A9$CD
+vtx$18B$5
+vtx$69$EB
+vtx$1EF$B9
+vtx$1BD$B9
+vtx$41$9B
+vtx$41$9B
+vtx$1EF$87
+vtx$163$4B
+vtx$163$7D
+vtx$1EF$7D
+vtx$7D$2D
+vtx$16D$2D
+vtx$131$C3
+vtx$195$C3
+vtx$217$5F
+vtx$181$5F
+vtx$217$AF
+vtx$195$55
+vtx$1F9$55
+vtx$F$19
+vtx$F$E1
+vtx$19$E1
+vtx$19$B9
+vtx$F$B9
+vtx$177$69
+vtx$1EF$69
+vtx$F5$69
+vtx$1EF$41
+vtx$177$23
+vtx$73$23
+vtx$1B3$23
+vtx$69$2D
+vtx$55$2D
+vtx$55$37
+vtx$55$41
+vtx$55$4B
+vtx$1B3$4B
+fld3 ACSelect$0 ALU_AC=0 CS_AC=1 DEFAULT=0 DS_AC=2 Mem_AC=5 SS_AC=3 Zero_AC=4
+fld1 ACWrite$0 ACWrite=1 DEFAULT=0
+fld2 ALUOp$0 Add=0 DEFAULT=2 Opcode0=2 Subt=1 Subtract=1
+fld3 ALUSrcA$0 AC_ALUA=5 CS_ALUA=2 DEFAULT=0 DS_ALUA=3 MAR_ALUA=1 MDR_ALUA=6 PC_ALUA=0 SS_ALUA=4
+fld3 ALUSrcB$0 Address10_ALUB=2 DEFAULT=3 Imm10_ALUB=0 MDR_ALUB=5 Offset10_ALUB=4 One_ALUB=1 Two_ALUB=3
+fld1 CSWrite$0 CSWrite=1 DEFAULT=0
+fld1 DSWrite$0 DEFAULT=0 DSWrite=1
+fld1 IRWrite$0 DEFAULT=0 IRWrite=1
+fld1 MARSelect$0 ALU_MAR=0 DEFAULT=0 Mem_MAR=1
+fld1 MARWrite$0 DEFAULT=0 MARWrite=1
+fld1 MDRSelect$0 ALU_MDR=0 DEFAULT=0 Mem_MDR=1
+fld1 MDRWrite$0 DEFAULT=0 MDRWrite=1
+fld1 MemAddressSelect$0 DEFAULT=0 MAR_MemAddress=1 PC_MemAddress=0
+fld1 MemRead$0 DEFAULT=0 MemRead=1 Read=1
+fld2 MemWDataSelect$0 AC_Mem=0 DEFAULT=0 MDR_Mem=2 PC_Mem=1
+fld1 MemWrite$0 DEFAULT=0 MemWrite=1 Write=1
+fld2 NextInstruction$0 DEFAULT=0 DispatchROM1=1 DispatchROM2=2 Fetch=0 Seq=3
+fld1 PCSelect$0 ALU_PC=0 DEFAULT=0 Mem_PC=1
+fld1 PCWrite$0 DEFAULT=0 PCWrite=1
+fld1 PCWriteCondN$0 DEFAULT=0 PCWriteCondN=1
+fld1 PCWriteCondP$0 DEFAULT=0 PCWriteCondP=1
+fld1 PCWriteCondZ$0 DEFAULT=0 PCWriteCondZ=1
+fld1 SSWrite$0 DEFAULT=0 SSWrite=1
+sig16 AC
+sig16 ACIn
+sig16 ACSource
+sig1 ALUFunct
+sig16 ALUInA
+sig16 ALUInB
+sig16 ALUResult
+sig10 Address10
+sig16 CS
+sig16 CSIn
+sig16 Const_0
+sig16 Const_1
+sig16 Const_2
+sig16 DS
+sig16 DSIn
+sig16 IR
+sig16 IRIn
+sig10 Imm10
+sig16 MAR
+sig16 MARIn
+sig16 MARSource
+sig16 MDR
+sig16 MDRIn
+sig16 MDRSource
+sig16 MemAddress
+sig16 MemRData
+sig16 MemWData
+sig15 MemWordAddress
+sig1 Negative
+sig10 Offset10
+sig6 Opcode 
+sig1 Opcode0
+sig16 PC
+sig16 PCIn
+sig16 PCSource
+sig1 PCWriteEnable
+sig1 Positive
+sig8 ROM1Data
+sig1 ROM1Unused
+sig8 ROM2Data
+sig1 ROM2Unused
+sig16 SExtImm
+sig16 SExtShftOffset
+sig16 SS
+sig16 SSin
+sig16 ZExtAddress
+sig1 Zero
+sig8 mpc
+edg DS DS$159$55$86$88
+edg Opcode Opcode$18B$19$3B$87
+edg DS DS$E1$55$7F$86
+edg SS SS$14F$91$84$85
+edg SS SS$14F$5F$7E$84
+edg AC AC$87$87$6E$57
+edg Address10 Address10$131$D7$82$83
+edg Offset10 Offset10$131$E1$80$81
+edg DS DS$E1$69$30$7F
+edg SS SS$D7$5F$7C$7E
+edg SS SS$CD$87$7D$31
+edg SS SS$D7$87$31$7C
+edg DS DS$CD$69$7B$30
+edg ACSource ACSource$109$7D$79$7A
+edg ACIn ACIn$11D$7D$77$78
+edg AC AC$145$9B$75$76
+edg AC AC$145$7D$74$75
+edg AC AC$145$7D$74$73
+edg AC AC$145$37$73$72
+edg AC AC$87$37$72$6C
+edg PC PC$69$9B$71$10
+edg ALUInB ALUInB$203$CD$6F$70
+edg AC AC$87$4B$6C$22
+edg AC AC$87$69$22$6E
+edg AC AC$91$87$6D$6E
+edg AC AC$91$4B$6B$6C
+edg ALUInA ALUInA$203$87$69$6A
+edg MAR MAR$91$AF$68$67
+edg MAR MAR$7D$AF$67$26
+edg ALUResult ALUResult$181$19$65$66
+edg MAR MAR$16D$73$63$64
+edg PC PC$73$9B$10$AA
+edg PC PC$73$23$AA$A9
+edg PC PC$177$23$A9$A5
+edg ALUResult ALUResult$181$19$65$9C
+edg ROM2Data ROM2Data$1EF$41$A8$40
+edg ALUResult ALUResult$F5$19$66$A7
+edg ALUResult ALUResult$F5$19$66$A0
+edg PC PC$177$69$A5$A6
+edg ALUResult ALUResult$19$B9$A3$A4
+edg ALUResult ALUResult$F$E1$A1$A2
+edg ALUResult ALUResult$F$19$A0$A1
+edg Opcode0 Opcode0$195$55$9E$9F
+edg Opcode0 Opcode0$195$C3$9A$9E
+edg ALUResult ALUResult$217$AF$9D$9B
+edg ALUResult ALUResult$217$5F$9B$9C
+edg Opcode0 Opcode0$131$C3$99$9A
+edg MAR MAR$16D$2D$98$63
+edg MAR MAR$7D$2D$97$98
+edg MAR MAR$7D$AF$67$97
+edg CS CS$163$7D$95$96
+edg CS CS$163$4B$94$95
+edg CS CS$EB$4B$2E$94
+edg DS DS$159$87$88$93
+edg MemRData MemRData$E1$AF$0$47
+edg PCIn PCIn$41$9B$91$92
+edg SExtImm SExtImm$1EF$B9$8F$90
+edg MDR MDR$69$EB$8E$4
+edg Opcode Opcode$18B$19$3B$8D
+edg Address10 Address10$1A9$D7$83$8C
+edg CS CS$EB$73$2F$8B
+edg Const_2 Const_2$1EF$D7$89$8A
+edg SS SS$D7$87$31$32
+edg DS DS$E1$69$30$2B
+edg CS CS$EB$4B$2E$2F
+edg CS CS$CD$4B$2D$2E
+edg DS DS$E1$7D$2B$2C
+edg MARIn MARIn$41$C3$29$2A
+edg PCSource PCSource$2D$9B$27$28
+edg MAR MAR$69$C3$25$26
+edg MemAddress MemAddress$A5$A5$23$24
+edg AC AC$91$69$21$22
+edg PC PC$73$9B$10$20
+edg MemWordAddress MemWordAddress$B9$A5$1E$1F
+edg PC PC$91$D7$1D$F
+edg ZExtAddress ZExtAddress$1EF$CD$1B$1C
+edg SExtShftOffset SExtShftOffset$1EF$E1$19$1A
+edg IR IR$11D$B9$17$18
+edg Imm10 Imm10$19F$B9$15$16
+edg Imm10 Imm10$19F$CD$14$15
+edg Imm10 Imm10$131$CD$13$14
+edg MemRData MemRData$5$F5$3$12
+edg MemRData MemRData$5$FF$12$11
+edg MemRData MemRData$E1$FF$11$1
+edg PC PC$73$D7$F$10
+edg DSIn DSIn$A5$69$D$E
+edg MemRData MemRData$5$F5$3$C
+edg ALUFunct ALUFunct$20D$55$A$B
+edg ROM1Data ROM1Data$1D1$23$8$9
+edg MDRSource MDRSource$2D$EB$6$7
+edg MDR MDR$91$EB$4$5
+edg MemRData MemRData$19$F5$2$3
+edg MemRData MemRData$E1$AF$0$1
+edg ALUResult ALUResult$19$91$61$62
+edg IRIn IRIn$F5$B9$5F$60
+edg CSIn CSIn$A5$4B$5D$5E
+edg Const_1 Const_1$1EF$C3$5B$5C
+edg MARSource MARSource$2D$C3$59$5A
+edg AC AC$87$CD$57$58
+edg MemWData MemWData$B9$AF$56$54
+edg MemWData MemWData$B9$D7$54$55
+edg Opcode Opcode$131$B9$53$3D
+edg MDRIn MDRIn$41$EB$51$52
+edg Zero Zero$131$9B$4F$50
+edg Positive Positive$131$91$4D$4E
+edg Negative Negative$131$87$4B$4C
+edg SSin SSin$A5$87$49$4A
+edg MemRData MemRData$E1$9B$47$48
+edg MDR MDR$91$EB$4$33
+edg MDR MDR$1C7$EB$33$34
+edg MDR MDR$1C7$A5$34$35
+edg MDR MDR$1C7$EB$33$36
+edg MemRData MemRData$5$CD$C$37
+edg MemRData MemRData$5$A5$38$39
+edg MemRData MemRData$5$CD$C$38
+edg Opcode Opcode$18B$41$3A$3B
+edg Opcode Opcode$18B$41$3A$3C
+edg Opcode Opcode$18B$B9$3D$3A
+edg Const_0 Const_0$F5$91$3E$3F
+edg ROM2Data ROM2Data$1E5$41$40$41
+edg mpc mpc$203$37$42$43
+edg ROM1Data ROM1Data$1E5$37$44$9
+edg ROM1Data ROM1Data$1EF$37$45$44
+edg ROM2Data ROM2Data$1D1$4B$46$41
+msg"AC"$122$6E
+msg"Dispatch ROM 2"$190$2D
+msg"Dispatch ROM 1"$190$A
+msg"uPC Control"$1E5$23
+msg"ALU Control"$1E5$46
+msg"DS"$B4$5A
+msg"Imm10=IR[9:0]"$131$C3
+msg"MDRSelect"$14$D2
+msg"MemAddressSelect"$8C$B4
+msg"Memory"$BE$96
+msg"PCWriteCondP"$14$32
+svw1 Opcode$18B$0$8D
+msg"Opcode[0]"$131$B9
+msg"Z"$122$96
+msg"PCWrite"$28$46
+msg"Address10=IR[9:0]"$131$CD
+msg"Opcode=IR[15:10]"$131$AF
+msg"P"$122$8C
+msg"PCSelect"$14$82
+msg"ALU"$20D$B9
+msg"MDR"$4B$DC
+msg"ACSelect"$FF$5F
+svw1 Negative$131$82$4C
+msg"ALUSrcB"$1F9$EB
+msg"ALUSrcA"$1CC$5F
+msg"N"$122$82
+msg"MAR"$4B$B4
+msg"PC Write Control"$14$1E
+msg"PCWriteCondN"$14$28
+msg"IR"$104$AA
+msg"PC"$50$8C
+msg"SS"$B4$78
+msg"PCWriteCondZ"$14$3C
+svw1 Positive$131$8C$4E
+msg"Offset10=IR[9:0]"$131$D7
+svw1 Zero$131$96$50
+msg"MemWDataSelect"$8C$BE
+msg"SignExt"$19F$AA
+msg"ZeroExt"$19F$BE
+msg"SignExt,Shift"$168$E1
+svw1 mpc$203$32$43
+msg"MARSelect"$14$AA
+msg"CS"$B4$3C
+con1 Const_0"0x0000"$C3$8C$3F
+con1 Const_1"0x0001"$1C7$BE$5C
+con1 Const_2"0x0002"$1C7$D2$8A
+cst1 4 0 PCWriteEnable PCWriteCondN PCWriteCondP PCWriteCondZ PCWrite"(PCWrite) | (PCWriteCondZ & Zero) | (PCWriteCondP & Positive) | (PCWriteCondN & Negative)"$55$28$AC$AD$AE$AF$B0
+mux6 ALUInB SExtImm Const_1 ZExtAddress Const_2 SExtShftOffset MDR ALUSrcB$1EF$B4$6F$8F$5B$1B$89$19$36
+cst1 1 0 ZExtAddress Address10"0(6) . Address10"$1A9$C8$1C$8C
+mux7 ALUInA PC MAR CS DS SS AC MDR ALUSrcA$1EF$64$69$A6$64$96$93$85$76$35
+cst1 1 1 IRIn MemRData IRWrite"IRWrite ? MemRData : IR"$E1$B4$60$1
+ram8$40$0"" ROM2Data Opcode ROM2Unused Const_1 Const_0$1B3$3C$46$3C$B1
+cst3 0 0 Negative Positive Zero"AC[15]""((AC != 0) && (AC[15] != 1)) ? 1 : 0""(AC == 0) ? 1 : 0"$11D$82$4B$4D$4F
+cst1 1 1 CSIn AC CSWrite"CSWrite ? AC : CS"$91$46$5D$6B
+cst1 1 0 SExtImm Imm10"Imm10[9] . Imm10[9] . Imm10[9] . Imm10[9] . Imm10[9] . Imm10[9] . Imm10"$1A9$B4$90$16
+cst5 1 0 Opcode Opcode0 Imm10 Address10 Offset10 IR"IR[15:10]""IR[10]""IR[9:0]""IR[9:0]""IR[9:0]"$11D$B4$53$99$13$82$80$18
+cst1 1 1 SSin AC SSWrite"SSWrite ? AC : SS"$91$82$49$6D
+cst1 1 0 SExtShftOffset Offset10"Offset10[9] . Offset10[9] . Offset10[9] . Offset10[9] . Offset10[9] . Offset10 . 0(1)"$1A9$DC$1A$81
+alu ALUResult ALUInA ALUInB ALUFunct"# control: 0=add, 1=subtract
+ALUFunct ? (ALUInA - ALUInB) : (ALUInA + ALUInB)"$203$A0$9D$6A$70
+cst1 1 1 MARIn MARSource MARWrite"MARWrite ? MARSource : MAR"$2D$BE$2A$5A
+cst1 1 1 DSIn AC DSWrite"DSWrite ? AC : DS"$91$64$D$21
+cst1 1 1 ALUFunct Opcode0 ALUOp"#ALUOP
+#00:  Add
+#X1:  Subtract
+#10:  Opcode0
+#Opcode0
+#0:  Add
+#1:  Subtract
+if (ALUOp == 0) {
+   0;
+}
+else if (ALUOp == 2) {
+   Opcode0;
+}
+else { #ALUOp == X1
+   1;
+}"$1F9$50$A$9F
+mux2 MemAddress PC MAR MemAddressSelect$91$96$24$20$68
+cst1 1 0 MemWordAddress MemAddress"MemAddress[16:1]"$A5$A0$1F$23
+mux6 ACSource ALUResult CS DS SS Const_0 MemRData ACSelect$F5$64$79$A7$8B$2C$32$3E$48
+mux2 MDRSource ALUResult MemRData MDRSelect$19$DC$6$A2$2
+ram16$8000$0"" MemRData MemWordAddress MemWData MemRead MemWrite$B9$A0$0$1E$56
+mux2 MARSource ALUResult MemRData MARSelect$19$B4$59$A3$37
+mux2 PCSource ALUResult MemRData PCSelect$19$8C$27$61$39
+cst1 1 1 MDRIn MDRSource MDRWrite"MDRWrite ? MDRSource : MDR"$2D$E6$52$7
+cst1 1 1 PCIn PCSource PCWriteEnable"PCWriteEnable ? PCSource :  PC"$2D$96$92$28
+ram8$40$0"" ROM1Data Opcode ROM1Unused Const_1 Const_0$1B3$14$8$87$AB
+cst1 1 1 ACIn ACSource ACWrite"ACWrite ? ACSource : AC"$109$78$78$7A
+cst1 2 0 mpc ROM1Data ROM2Data"#NextInstruction
+#00:  Fetch
+#01:  Dispatch ROM 1
+#02:  Dispatch ROM 2
+#03:  Sequential
+if (NextInstruction == 3) {
+   mpc + 1;
+}
+else if (NextInstruction == 1) {
+   ROM1Data;
+}
+else if (NextInstruction == 2) {
+   ROM2Data;
+}
+else {
+   0;
+}"$1EF$32$42$45$A8
+mux3 MemWData AC PC MDR MemWDataSelect$91$C8$55$58$1D$5
+reg0 MAR MARIn$41$BE$25$29
+reg0 SS SSin$A5$82$7D$4A
+reg0 MDR MDRIn$41$E6$8E$51
+reg0 IR IRIn$F5$B4$17$5F
+reg0 AC ACIn$11D$78$74$77
+reg0 DS DSIn$A5$64$7B$E
+reg0 PC PCIn$41$96$71$91
+reg0 CS CSIn$A5$46$2D$5E
