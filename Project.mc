@@ -232,3 +232,32 @@
 44:	PCWriteCondZ, PC_ALUA, Offset10_ALUB, Add,
 	Fetch;
 
+#45	DecM/IncM 1 (29/30)
+#	MDR <- M[MAR]
+45:	MAR_MemAddress, Mem_MDR, MDRWrite, MemRead,
+	Seq;
+	
+#46	DecM/IncM 2 (29/30)
+#	MDR <- MDR +-1
+46:	MDR_ALUA, One_ALUB, Opcode0, ALU_MDR, MDRWrite,
+	Seq;
+	
+#47	DecM/IncM 3 (29/30)
+#	M[MAR] <- MDR
+47:	MAR_MemAddress, MDR_Mem, MemWrite,
+	Fetch;
+	
+#48 JumpDisp 1 (1)
+#	MDR <- M[MAR]
+48:	MAR_MemAddress, Mem_MDR, MDRWrite, MemRead,
+	Seq;
+
+#49	JumpDisp 2 (1)
+#	MAR <- MDR + SignExt(imm10)
+49:	MDR_ALUA, Imm10_ALUB, Add, ALU_MAR, MARWrite,
+	Seq;
+	
+#50 JumpDisp 3 (1)
+#	PC <- M[MAR]
+50:	MAR_MemAddress, Mem_PC, PCWrite, MemRead,
+	Fetch;
