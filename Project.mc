@@ -261,3 +261,148 @@
 #	PC <- M[MAR]
 50:	MAR_MemAddress, Mem_PC, PCWrite, MemRead,
 	Fetch;
+	
+#51	JumpSub 1 (3)
+#	MAR <- SS + Address 10
+51:	SS_ALUA, Address10_ALUB, Add, ALU_MAR, MARWrite,
+	Seq;
+	
+#52	JumpSub 2 (3)
+#	MDR <- M[MAR]
+52:	MAR_MemAddress, Mem_MDR, MDRWrite, MemRead,
+	Seq;
+	
+#53 JumpSub 3 (3)
+#	MDR <- MDR - 2
+53:	MDR_ALUA, Two_ALUB, Subt, ALU_MDR, MDRWrite,
+	Seq;
+	
+#54 JumpSub 4 (3)
+#	M[MAR] <- MDR
+54:	MAR_MemAddress, MDR_Mem, MemWrite,
+	Seq;
+	
+#55 JumpSub 5 (3)
+#	MDR <- PC + 2
+#	MAR <- M[MAR]
+55:	PC_ALUA, Two_ALUB, Add, ALU_MDR, MDRWrite,
+	Mem_MAR, MAR_MemAddress, MemRead, MARWrite,
+	Seq;
+	
+#56	JumpSub 6 (3)
+#	M[MAR] <- MDR
+56:	MAR_MemAddress, MDR_Mem, MemWrite,
+	Seq;
+	
+#57 JumpSub 7 (3)
+#	MDR <- M[PC]
+57:	PC_MemAddress, Mem_MDR, MDRWrite, MemRead,
+	Seq;
+	
+#58 JumpSub 8 (3)
+#	PC <- MDR
+58:	Mem_PC, PCWrite,
+	Fetch;
+
+	
+#59 Pop 1 (10)
+#	MAR <- SS + Address10
+59:	SS_ALUA, Address10_ALUB, Add, ALU_MAR, MARWrite,
+	Seq;
+	
+#60	Pop 2 (10)
+#	MAR <- M[MAR]
+#	MDR <- M[MAR]
+60:	MAR_MemAddress, Mem_MAR, MARWrite, Mem_MDR, MDRWrite, MemRead,
+	Seq;
+
+#61 Pop 3 (10)
+#	AC <- M[MAR]
+61:	MAR_MemAddress, Mem_AC, ACWrite, MemRead,
+	Seq;
+	
+#62	Pop 4 (10)
+#	MDR <- MDR + 2
+62:	MDR_ALUA, Two_ALUB, Add, ALU_MDR, MDRWrite,
+	Seq;
+	
+#63 Pop 5(10)
+#	MAR <- SS + Address10
+63:	SS_ALUA, Address10_ALUB, Add, ALU_MAR, MARWrite,
+	Seq;
+	
+#64 Pop 6 (10)
+#	M[MAR] <- MDR
+64:	MDR_Mem, MAR_MemAddress, MemWrite,
+	Fetch;
+	
+#65 Push 1 (9)
+#	MAR <- SS + Address10
+65:	SS_ALUA, Address10_ALUB, Add, ALU_MAR, MARWrite,
+	Seq;
+
+#66 Push 2 (9)
+#	MDR<- M[MAR]
+66:	MAR_MemAddress, Mem_MDR, MDRWrite, MemRead,
+	Seq;
+	
+#67	Push 3 (9)
+#	MDR <- MDR - 2
+67:	MDR_ALUA, Two_ALUB, Subt, ALU_MDR, MDRWrite,
+	Seq;
+	
+#68	Push 4 (9)
+#	M[MAR] <- MDR
+68:	MAR_MemAddress, MDR_Mem, MemWrite,
+	Seq;
+	
+#69 Push 5 (9)
+#	MAR <- M[MAR]
+69:	MAR_MemAddress, Mem_MAR, MARWrite, MemRead,
+	Seq;
+
+#70 Push 6 (9)
+#	M[MAR] <- AC
+70:	MAR_MemAddress, Mem_AC, MemWrite,
+	Fetch;
+
+#71	StoreN 1 (12)
+#	MAR <- M[MAR]
+71:	MAR_MemAddress, Mem_MAR, MARWrite, MemRead,
+	Seq;
+	
+#72	StoreN2 (12)
+#	M[MAR] <- AC
+72:	AC_Mem, MAR_MemAddress, MemWrite,
+	Fetch;
+	
+#73 RetSub 1 (2)
+#	MAR <- SS + Address10
+73:	SS_ALUA, Address10_ALUB, Add, ALU_MAR, MARWrite,
+	Seq;
+
+#74 RetSub 2 (2)
+#	MAR <- M[MAR]
+#	MDR <- M[MAR]
+74:	MAR_MemAddress, Mem_MAR, MARWrite, Mem_MDR, MDRWrite, MemRead,
+	Seq;
+	
+#75 RetSub 3 (2)
+#	PC <- M[MAR]
+75:	MAR_MemAddress, Mem_PC, PCWrite, MemRead,
+	Seq;
+
+#76	RetSub 4 (2)
+#	MDR <- MDR + 2
+76:	MDR_ALUA, Two_ALUB, Add, ALU_MDR, MDRWrite,
+	Seq;
+	
+#77 RetSub 5 (2)
+#	MAR <- SS + Address10
+77:	SS_ALUA, Address10_ALUB, Add, ALU_MAR, MARWrite,
+	Seq;
+	
+#78 RetSub 6 (2)
+#	M[MAR] <- MDR
+78:	MDR_Mem, MAR_MemAddress, MemWrite,
+	Fetch;

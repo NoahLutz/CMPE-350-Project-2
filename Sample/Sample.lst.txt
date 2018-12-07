@@ -1,0 +1,289 @@
+Code	MemWord	Addr    HexAddr	Label	    Instruction
+                                            ORG     0x0000
+3D00	0		0	    0000		        Store	0_AC
+6E49	1		2	    0002		        LoadCS
+3D02	2		4	    0004		        Store	0_CS
+65F3	3		6	    0006		        LoadDS
+3D04	4		8	    0008		        Store	0_DS
+4D9E	5		10	    000A		        LoadSS
+3D06	6		12	    000C		        Store	0_SS
+8D08	7		14	    000E		        Load	0_NegOne
+3D0A	8		16	    0010		        Store	0_AC1
+0110	9		18	    0012		        Clear
+3D0C	10		20	    0014		        Store	0_AC1A
+6800	11		22	    0016		        AddIL	0xFC00
+FC00	12		24	    0018
+3D0E	13		26	    001A		        Store	0_AC2
+2ECC	14		28	    001C		        StoreSS
+4D73	15		30	    001E		        LoadSS
+3D10	16		32	    0020		        Store	0_SS2
+5400	17		34	    0022		        LoadIL	0x8000
+8000	18		36	    0024
+3D12	19		38	    0026		        Store	0_AC3
+37B3	20		40	    0028		        StoreDS
+6454	21		42	    002A		        LoadDS
+3C02	22		44	    002C		        Store	DS
+1430	23		46	    002E		        Jump	Next
+3C04	24		48	    0030	Next:	    Store	DS2
+5400	25		50	    0032		        LoadIL	0x0400
+0400	26		52	    0034
+3C06	27		54	    0036		        Store	CS
+3BE5	28		56	    0038		        StoreCS
+6D8E	29		58	    003A		        LoadCS
+3C08	30		60	    003C		        Store	CS2
+1400	31		62	    003E		        Jump	0x0000
+
+                                            ORG     0x0100
+AAAA	128	    256	    0100	0_AC	 	0xAAAA
+CCCC	129		258	    0102	0_CS	 	0xCCCC
+DDDD	130		260	    0104	0_DS	 	0xDDDD
+EEEE	131		262	    0106	0_SS	 	0xEEEE
+FFFF	132		264	    0108	0_NegOne	0xFFFF
+AAA1	133		266	    010A	0_AC1	 	0xAAA1
+AA1A	134		268	    010C	0_AC1A	 	0xAA1A
+AAA2	135		270	    010E	0_AC2	 	0xAAA2
+EEE2	136		272	    0110	0_SS2	 	0xEEE2
+AAA3	137		274	    0112	0_AC3	 	0xAAA3
+DDD2	138		276	    0114	0_DS2	 	0xDDD2
+
+                                            ORG     0x0400
+0148	512	    1024	0400		        Clear
+842C	513		1026	0402		        Dec
+3C0A	514		1028	0404		        Store	NegOne
+896D	515		1030	0406		        Inc
+8B37	516		1032	0408		        Inc
+3C0C	517		1034	040A		        Store	One
+800A	518		1036	040C		        Add	    NegOne
+3C0E	519		1038	040E		        Store	Zero
+7C0A	520		1040	0410		        Subt	NegOne
+3C10	521		1042	0412		        Store	One2
+0233	522		1044	0414		        Clear
+3C12	523		1046	0416		        Store	One3
+7812	524		1048	0418		        IncM	One3
+8C12	525		1050	041A		        Load	One3
+3C14	526		1052	041C		        Store	Zero2
+7414	527		1054	041E		        DecM	Zero2
+57FF	528		1056	0420		        LoadIL	0xFFFF
+FFFF	529		1058	0422
+3C16	530		1060	0424		        Store	NegOne2
+7001	531		1062	0426		        AddI	1
+3C18	532		1064	0428		        Store	Zero3
+73FF	533		1066	042A		        AddI	0x03FF
+3C1A	534		1068	042C		        Store	NegOne3
+02C6	535		1070	042E		        Clear
+8453	536		1072	0430		        Dec
+856E	537		1074	0432		        Dec
+3C1C	538		1076	0434		        Store	NegTwo
+301E	539		1078	0436		        StoreN	SP
+0146	540		1080	0438		        Clear
+5BFE	541		1082	043A		        AddL	0xFFFE
+FFFE	542		1084	043C
+3C20	543		1086	043E		        Store	NegTwo2
+0361	544		1088	0440		        Clear
+5C22	545		1090	0442		        AddDec	Count
+5C22	546		1092	0444		        AddDec	Count
+5C22	547		1094	0446		        AddDec	Count
+3C24	548		1096	0448		        Store	Count2
+0255	549		1098	044A		        Clear
+6026	550		1100	044C		        AddInc	Count3
+6026	551		1102	044E		        AddInc	Count3
+6026	552		1104	0450		        AddInc	Count3
+3C28	553		1106	0452		        Store	Count4
+0289	554		1108	0454		        Clear
+482A	555		1110	0456		        AddNInc	ArrInPtr
+302E	556		1112	0458		        StoreN	ArrOutPtr
+782E	557		1114	045A		        IncM	ArrOutPtr
+782E	558		1116	045C		        IncM	ArrOutPtr
+482A	559		1118	045E		        AddNInc	ArrInPtr
+302E	560		1120	0460		        StoreN	ArrOutPtr
+782E	561		1122	0462		        IncM	ArrOutPtr
+782E	562		1124	0464		        IncM	ArrOutPtr
+482A	563		1126	0466		        AddNInc	ArrInPtr
+302E	564		1128	0468		        StoreN	ArrOutPtr
+782E	565		1130	046A		        IncM	ArrOutPtr
+782E	566		1132	046C		        IncM	ArrOutPtr
+3C42	567		1134	046E		        Store	Arr3
+742A	568		1136	0470		        DecM	ArrInPtr
+742A	569		1138	0472		        DecM	ArrInPtr
+3C44	570		1140	0474		        Store	Arr3_2
+442A	571		1142	0476		        AddNDec	ArrInPtr
+302E	572		1144	0478		        StoreN	ArrOutPtr
+782E	573		1146	047A		        IncM	ArrOutPtr
+782E	574		1148	047C		        IncM	ArrOutPtr
+442A	575		1150	047E		        AddNDec	ArrInPtr
+302E	576		1152	0480		        StoreN	ArrOutPtr
+782E	577		1154	0482		        IncM	ArrOutPtr
+782E	578		1156	0484		        IncM	ArrOutPtr
+442A	579		1158	0486		        AddNDec	ArrInPtr
+302E	580		1160	0488		        StoreN	ArrOutPtr
+3C46	581		1162	048A		        Store	Arr6
+00D9	582		1164	048C		        Clear
+43FE	583		1166	048E		        AddDisp	-2, ArrIn1Ptr
+802C	584		1168	0490
+4000	585		1170	0492		        AddDisp	0, ArrIn1Ptr
+802C	586		1172	0494
+4002	587		1174	0496		        AddDisp	2, ArrIn1Ptr
+802C	588		1176	0498
+3C48	589		1178	049A		        Store	Arr3_3
+8C0A	590		1180	049C		        Load	NegOne
+27FE	591		1182	049E		        Push	0x03FE
+8C0E	592		1184	04A0		        Load	Zero
+27FE	593		1186	04A2		        Push	0x03FE
+8C0C	594		1188	04A4		        Load	One
+27FE	595		1190	04A6		        Push	0x03FE
+2BFE	596		1192	04A8		        Pop	    0x03FE
+3C4A	597		1194	04AA		        Store	One4
+2BFE	598		1196	04AC		        Pop	    0x03FE
+3C4C	599		1198	04AE		        Store	Zero4
+2BFE	600		1200	04B0		        Pop	    0x03FE
+3C4E	601		1202	04B2		        Store	NegOne4
+5062	602		1204	04B4		        AddN	OnePtr
+3C50	603		1206	04B6		        Store	Zero5
+3064	604		1208	04B8		        StoreN	Zero6Ptr
+0097	605		1210	04BA		        Clear
+14CA	606		1212	04BC		        Jump	Over
+7010	607		1214	04BE	Over2:	    AddI	16
+3C56	608		1216	04C0		        Store	Sixteen
+0134	609		1218	04C2		        Clear
+0FFE	610		1220	04C4		        JumpSub	0x03FE, TestSub
+0556	611		1222	04C6
+1506	612		1224	04C8		        Jump	TestBN
+7020	613		1226	04CA	Over:	    AddI	32
+3C54	614		1228	04CC		        Store	ThirtyTwo
+01F1	615		1230	04CE		        Clear
+1000	616		1232	04D0		        JumpN	Over2Lbl
+00E9	617		1234	04D2	Done:	    Clear
+85AF	618		1236	04D4		        Dec
+8726	619		1238	04D6		        Dec
+07FE	620		1240	04D8		        JumpDisp	-2, JTbl1Ptr
+8066	621		1242	04DA
+02C7	622		1244	04DC	JD1:	    Clear
+0400	623		1246	04DE		        JumpDisp	0, JTbl1Ptr
+8066	624		1248	04E0
+01EB	625		1250	04E2	JD2:	    Clear
+8859	626		1252	04E4		        Inc
+8BF5	627		1254	04E6		        Inc
+0402	628		1256	04E8		        JumpDisp	2, JTbl1Ptr
+8066	629		1258	04EA
+0156	630		1260	04EC	Done2:	    Clear
+7042	631		1262	04EE		        AddI	0x0042
+3C60	632		1264	04F0		        Store	Result
+14F2	633		1266	04F2	End:	    Jump	End
+8C0C	634		1268	04F4	BNFailP:	Load	One
+3C5A	635		1270	04F6		        Store	BNResult
+1526	636		1272	04F8		        Jump	TestBZ
+03E7	637		1274	04FA	BNFailZ:	Clear
+3C5A	638		1276	04FC		        Store	BNResult
+1526	639		1278	04FE		        Jump	TestBZ
+8C0A	640		1280	0500	BNFailN:	Load	NegOne
+3C5A	641		1282	0502		        Store	BNResult
+1526	642		1284	0504		        Jump	TestBZ
+00EA	643		1286	0506	TestBN:	    Clear
+7288	644		1288	0508		        AddI	0x0288
+3C5A	645		1290	050A		        Store	BNResult
+1BF3	646		1292	050C		        BrPos	BNFailP
+1FF5	647		1294	050E		        BrZ	    BNFailZ
+200A	648		1296	0510		        BrNeg	TestBZ
+1500	649		1298	0512		        Jump	BNFailN
+8C0C	650		1300	0514	BZFailP:	Load	One
+3C5C	651		1302	0516		        Store	BZResult
+1548	652		1304	0518		        Jump	TestBP
+021C	653		1306	051A	BZFailZ:	Clear
+3C5C	654		1308	051C		        Store	BZResult
+1548	655		1310	051E		        Jump	TestBP
+8C0A	656		1312	0520	BZFailN:	Load	NegOne
+3C5C	657		1314	0522		        Store	BZResult
+1548	658		1316	0524		        Jump	TestBP
+03D2	659		1318	0526	TestBZ:	    Clear
+7178	660		1320	0528		        AddI	0x0178
+3C5C	661		1322	052A		        Store	BZResult
+0224	662		1324	052C		        Clear
+1BF2	663		1326	052E		        BrPos	BZFailP
+23F7	664		1328	0530		        BrNeg	BZFailN
+1C0A	665		1330	0532		        BrZ	    TestBP
+151A	666		1332	0534		        Jump	BZFailZ
+8C0C	667		1334	0536	BPFailP:	Load	One
+3C5C	668		1336	0538		        Store	BZResult
+14D2	669		1338	053A		        Jump	Done
+0030	670		1340	053C	BPFailZ:	Clear
+3C5C	671		1342	053E		        Store	BZResult
+14D2	672		1344	0540		        Jump	Done
+8C0A	673		1346	0542	BPFailN:	Load	NegOne
+3C5C	674		1348	0544		        Store	BZResult
+14D2	675		1350	0546		        Jump	Done
+03D6	676		1352	0548	TestBP:	    Clear
+7177	677		1354	054A		        AddI	0x0177
+3C5E	678		1356	054C		        Store	BPResult
+1FF6	679		1358	054E		        BrZ	    BPFailZ
+23F8	680		1360	0550		        BrNeg	BPFailN
+1BBF	681		1362	0552		        BrPos	Done
+1536	682		1364	0554		        Jump	BPFailP
+7040	683		1366	0556	TestSub:	AddI	64
+3C58	684		1368	0558		        Store	SixtyFour
+0BFE	685		1370	055A		        RetSub	0x03FE
+3C6E	686		1372	055C	JEntry1	    Store	JTblVal0
+14DC	687		1374	055E		        Jump	JD1
+3C70	688		1376	0560	JEntry2	    Store	JTblVal1
+14E2	689		1378	0562		        Jump	JD2
+3C72	690		1380	0564	JEntry3	    Store	JTblVal2
+14EC	691		1382	0566		        Jump	Done2
+
+                                            ORG     0x8000
+04BE	16384   32768	8000	Over2Lbl	0x04BE
+1DDD	16385	32770	8002	DS	 	    0x1DDD
+1DD2	16386	32772	8004	DS2	 	    0x1DD2
+1CCC	16387	32774	8006	CS	 	    0x1CCC
+1CC2	16388	32776	8008	CS2	 	    0x1CC2
+9999	16389	32778	800A	NegOne	 	0x9999
+1111	16390	32780	800C	One	 	    0x1111
+8888	16391	32782	800E	Zero	 	0x8888
+1112	16392	32784	8010	One2	 	0x1112
+1113	16393	32786	8012	One3	 	0x1113
+8882	16394	32788	8014	Zero2	 	0x8882
+9992	16395	32790	8016	NegOne2	 	0x9992
+8883	16396	32792	8018	Zero3	 	0x8883
+9993	16397	32794	801A	NegOne3	 	0x9993
+AAA1	16398	32796	801C	NegTwo	 	0xAAA1
+FFFE	16399	32798	801E	SP	 	    0xFFFE
+AAA2	16400	32800	8020	NegTwo2	 	0xAAA2
+0000	16401	32802	8022	Count	 	0x0000
+0003	16402	32804	8024	Count2	 	0x0003
+0003	16403	32806	8026	Count3	 	0x0003
+0003	16404	32808	8028	Count4	 	0x0003
+8030	16405	32810	802A	ArrInPtr	0x8030
+8032	16406	32812	802C	ArrIn1Ptr	0x8032
+8036	16407	32814	802E	ArrOutPtr	0x8036
+0001	16408	32816	8030	ArrIn0	 	0x0001
+0002	16409	32818	8032	ArrIn1	 	0x0002
+0003	16410	32820	8034	ArrIn2	 	0x0003
+ADD1	16411	32822	8036	ArrOut0	 	0xADD1
+ADD2	16412	32824	8038	ArrOut1	 	0xADD2
+ADD3	16413	32826	803A	ArrOut2	 	0xADD3
+ADD4	16414	32828	803C	ArrOut3	 	0xADD4
+ADD5	16415	32830	803E	ArrOut4	 	0xADD5
+ADD6	16416	32832	8040	ArrOut5	 	0xADD6
+3AEE	16417	32834	8042	Arr3	 	0x3AEE
+3AE2	16418	32836	8044	Arr3_2	 	0x3AE2
+6AEE	16419	32838	8046	Arr6	 	0x6AEE
+3AE3	16420	32840	8048	Arr3_3	 	0x3AE3
+1114	16421	32842	804A	One4	 	0x1114
+8884	16422	32844	804C	Zero4	 	0x8884
+9994	16423	32846	804E	NegOne4	 	0x9994
+8885	16424	32848	8050	Zero5	 	0x8885
+8886	16425	32850	8052	Zero6	 	0x8886
+0032	16426	32852	8054	ThirtyTwo	0x0032
+0016	16427	32854	8056	Sixteen	 	0x0016
+0064	16428	32856	8058	SixtyFour	0x0064
+BF00	16429	32858	805A	BNResult	0xBF00
+B000	16430	32860	805C	BZResult	0xB000
+B700	16431	32862	805E	BPResult	0xB700
+ABCD	16432	32864	8060	Result	 	0xABCD
+800C	16433	32866	8062	OnePtr	 	0x800C
+8052	16434	32868	8064	Zero6Ptr	0x8052
+806A	16435	32870	8066	JTbl1Ptr	0x806A
+055C	16436	32872	8068	JTbl0	 	0x055C
+0560	16437	32874	806A	JTbl1	 	0x0560
+0564	16438	32876	806C	JTbl2	 	0x0564
+F000	16439	32878	806E	JTblVal0	0xF000
+F001	16440	32880	8070	JTblVal1	0xF001
+F002	16441	32882	8072	JTblVal2	0xF002

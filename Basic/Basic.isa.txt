@@ -1,0 +1,25 @@
+0000 # 0    Clear	
+2C00 # 1    StoreSS	
+3D00 # 2    Store	0x0100
+4C00 # 3    LoadSS	
+3D02 # 4    Store	0x0102
+0000 # 5    Clear	
+3400 # 6    StoreDS	
+3D04 # 7    Store	0x0104
+6400 # 8    LoadDS	
+3D06 # 9    Store	0x0106
+0000 # 10   Clear	
+3800 # 11   StoreCS	
+3D08 # 12   Store	0x0108
+6C00 # 13   LoadCS	
+3D0A # 14   Store	0x010A
+0000 # 15   Clear	
+8800 # 16   Inc	
+3D0C # 17   Store	0x010C
+8400 # 18   Dec	
+3D0E # 19   Store	0x010E
+8400 # 20   Dec	
+3D10 # 21   Store	0x0110
+8D0C # 22   Load	0x010C
+3D12 # 23   Store	0x0112
+1430 # 24   Jump	0x0030
